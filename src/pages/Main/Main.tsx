@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
     main_categories: {
         marginTop: 40,
         width: '100%',
-        height: 'fit-content',
     },
 
     main_categories_image: {

@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
     main_categories: {
         marginTop: 40,
         width: '100%',
-        height: 'fit-content',
     },
 
     main_categories_image: {
         width: '100%',
         height: 200,
+        zIndex: 0,
     },
 
     main_categories_background: {
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
         height: 200,
         backgroundImage: 'linear-gradient(0deg, #25261F 15.38%, rgba(36, 37, 30, 0.77) 42.83%, rgba(30, 31, 24, 0) 70.77%)',
         borderRadius: 30,
+        zIndex: 1,
     }
 });
 
