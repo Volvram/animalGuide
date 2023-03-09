@@ -7,7 +7,7 @@ import Article from "./components/Article/Article";
 const Articles = () => {
     return (
         <View style={styles.main_articles}>
-            <Text style={{color: COLORS.white, fontSize: SIZES.h4 }}>Recommended Article</Text>
+            <Text style={{color: COLORS.white, fontSize: SIZES.h4 }}>Рекомендации</Text>
             <View style={styles.articles_list}>
                 {articles.map((article) => {
                     return (
@@ -22,7 +22,7 @@ const Articles = () => {
 
 const styles = StyleSheet.create({
     main_articles: {
-        marginTop: 60,
+        marginTop: 27,
         display: 'flex',
     },
 
