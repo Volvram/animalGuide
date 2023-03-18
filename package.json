@@ -16,13 +16,18 @@
     "react-dom": "^18.2.0",
     "react-native": "0.71.3",
     "react-native-responsive-screen": "^1.4.2",
-    "react-native-web": "~0.18.11"
+    "react-native-track-player": "^3.2.0",
+    "react-native-web": "~0.18.11",
+    "expo-linear-gradient": "~12.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@tsconfig/react-native": "^2.0.3",
+    "@types/jest": "^29.5.0",
     "@types/react": "~18.0.14",
     "@types/react-native": "^0.71.3",
-    "typescript": "^4.9.4"
+    "@types/react-test-renderer": "^18.0.0",
+    "typescript": "^4.9.5"
   },
   "private": true
 }
