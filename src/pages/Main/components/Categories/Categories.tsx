@@ -24,7 +24,7 @@ const Categories = () => {
 
     return (
         <View style={styles.main_categories}>
-            <ImageBackground style={{aspectRatio: imageSize.width / imageSize.height, zIndex: 0}} 
+            <ImageBackground style={{aspectRatio: imageSize.width / imageSize.height}} 
             source={require('../../../../../assets/animalCategory.png')} resizeMode="contain">
                 <LinearGradient
                     colors={[
@@ -33,11 +33,9 @@ const Categories = () => {
                     'rgba(36, 37, 30, 0.77)',
                     '#25261F',
                     ]}
-                    start={[0, 0.9]}
                     style={{flex: 1, justifyContent: 'center', borderRadius: 30}}>
 
                     <View style={{aspectRatio: imageSize.width / imageSize.height, ...styles.main_categories_background}}>
-                        <View style={{width: 7, height: 19, backgroundColor: COLORS.yellow}} />
                         <Text style={{aspectRatio: imageSize.width / imageSize.height, ...styles.main_categories_background_text}}>
                             Животные
                         </Text>
@@ -56,9 +54,9 @@ const styles = StyleSheet.create({
     main_categories_background: {
         width: '100%',
         borderRadius: 30,
-        zIndex: 1,
     },
     main_categories_background_text: {
+        position: "absolute",
         marginTop: "30%", 
         marginBottom: 30, 
         marginLeft: 22, 

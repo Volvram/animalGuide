@@ -1,9 +1,5 @@
 import React from "react"
 import { StyleSheet, View, Image, Text, Dimensions  } from "react-native";
-import { 
-    widthPercentageToDP as wp, 
-    heightPercentageToDP as hp, 
-} from 'react-native-responsive-screen';
 import { COLORS } from "../../../../../../config/constants";
 import { ArticleType } from "../../../../../../db/articles";
 
@@ -12,8 +8,8 @@ type ArticleProps = {
 }
 
 const Article: React.FC<ArticleProps> = ({article}) => {
-    const [desiredWidth, setDesiredWidth] = React.useState(0)
-    const [desiredHeight, setDesiredHeight] = React.useState(0)
+    const [desiredWidth, setDesiredWidth] = React.useState<number>(735)
+    const [desiredHeight, setDesiredHeight] = React.useState<number>(525)
 
     Image.getSize(article.image, (width, height) => {
         setDesiredWidth(width);
@@ -21,10 +17,12 @@ const Article: React.FC<ArticleProps> = ({article}) => {
     })
     return (
         <View style={styles.main_articles_article}>
-            { article.image && <Image style={{aspectRatio: desiredWidth / desiredHeight, borderRadius: 13, marginBottom: 7}} source={{uri: article.image }} resizeMode="contain"/> }
+            { article.image && <Image style={{aspectRatio: Number(desiredWidth / desiredHeight), borderRadius: 13, marginBottom: 7}} 
+            source={{uri: article.image }} resizeMode="contain"/> 
+            }
             <Text style={{color: COLORS.white}}>{article.text}</Text>
             <View style={{marginTop: 20, marginBottom: 4, display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                <Image source={require("../../../../../../../assets/readImage.svg")} style={{width: 12, height: 12}}/>
+                <Image source={require("../../../../../../../assets/readImage.png")} style={{width: 12, height: 12}}/>
                 <Text style={{marginLeft: 3, color: COLORS.white}}>ЧИТАТЬ</Text>
             </View>
         </View>

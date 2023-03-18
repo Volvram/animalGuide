@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 
 import { COLORS } from "../../config/constants";
 import Articles from "./components/Articles/Articles";
@@ -7,13 +7,12 @@ import Categories from "./components/Categories/Categories";
 import Header from "./components/Header/Header";
 
 const Main = () => {
-
     return (
-        <View style={styles.main}>
+        <ScrollView style={styles.main}>
             <Header />
             <Categories />
             <Articles />
-        </View>
+        </ScrollView >
     )
 }
 
